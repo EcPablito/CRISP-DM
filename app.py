@@ -133,14 +133,14 @@ def show_dataset_download_button():
     if DATASET_FILE.exists():
         dataset_bytes = DATASET_FILE.read_bytes()
         st.download_button(
-            label="Descargar dataset de ejemplo",
+            label="Descargar dataset",
             data=dataset_bytes,
             file_name=DATASET_FILE.name,
             mime="text/csv"
         )
     else:
         st.warning(
-            "No se encontró el dataset de ejemplo en el servidor. "
+            "No se encontró el dataset. "
             "Verifica que el archivo CSV esté en la misma carpeta que app.py."
         )
 
@@ -991,7 +991,7 @@ if option != st.session_state.last_option:
 # =========================================================
 if option == "Portada":
     show_cover()
-    st.header("Descarga del dataset de ejemplo")
+    st.header("Descarga del dataset")
     show_dataset_download_button()
     st.stop()
 
