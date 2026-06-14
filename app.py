@@ -79,7 +79,7 @@ st.markdown(
 # =========================================================
 REQUIRED_COLUMNS = ["fecha_enc_vent", "score", "canal_venta"]
 VALID_CHANNELS = ["WA", "PRE", "TEL", "MAIL"]
-DATASET_FILE = Path("dataset_simulado_retroalimentacion_calidad_ventas_canales_codificados.csv")
+DATASET_FILE = Path("surveyPonteSelva.csv")
 FREQUENCY_OPTIONS = ["Diaria", "Semanal", "Mensual"]
 FREQ_MAP = {"Diaria": "D", "Semanal": "W", "Mensual": "M"}
 
@@ -992,7 +992,6 @@ if option != st.session_state.last_option:
 if option == "Portada":
     show_cover()
     st.header("Descarga del dataset de ejemplo")
-    st.write("Puedes descargar el dataset simulado usado para probar la aplicación.")
     show_dataset_download_button()
     st.stop()
 
